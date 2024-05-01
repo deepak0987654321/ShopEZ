@@ -5,19 +5,24 @@ import AppInput from '../../components/input/AppInput'
 import Button from '../../components/button/Button'
 import { useForm, Controller } from 'react-hook-form'
 import { routes } from '../../constants'
+import Animated, { FadeInDown, FadeInUp } from 'react-native-reanimated'
 
 type FormValues = {
   phoneNumber: string
 }
 
-
-const Login = ({navigation} : any) => {
-  const [phoneNumber, setPhoneNumber] = useState<string>('');
-  const { handleSubmit, control, register, formState:{errors} } = useForm<FormValues>({
+const Login = ({ navigation }: any) => {
+  const [phoneNumber, setPhoneNumber] = useState<string>('')
+  const {
+    handleSubmit,
+    control,
+    register,
+    formState: { errors },
+  } = useForm<FormValues>({
     defaultValues: {
-      phoneNumber: "",
+      phoneNumber: '',
     },
-    mode: "onChange",
+    mode: 'onChange',
   })
   const onSubmit = (data: FormValues) => {
     console.log(data)
@@ -25,29 +30,56 @@ const Login = ({navigation} : any) => {
   }
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
+      <Animated.View
+        entering={FadeInUp.duration(1000).springify()}
+        style={styles.content}
+      >
         <Text style={styles.title}>Welcome Back</Text>
         <Text style={styles.subTitle}>Sign to your account</Text>
-      </View>
-      <View style={styles.innerView}>
-      <Controller
-        control={control}
-        rules={{
-          required: { value: true, message: "Please enter the your phone number" },
-        }}
-        render={({ field: { onChange, onBlur, value } }) => (
-          <AppInput name="phoneNumber" label="Phone number" placeholder="Enter your details" value={value} keyboardType="phone-pad" validation={errors.phoneNumber} onChangeText={onChange} />
+      </Animated.View>
+      <Animated.View
+        entering={FadeInDown.duration(1000).springify().delay(500)}
+        style={styles.innerView}
+      >
+        <Controller
+          control={control}
+          rules={{
+            required: {
+              value: true,
+              message: 'Please enter the your phone number',
+            },
+          }}
+          render={({ field: { onChange, onBlur, value } }) => (
+            <AppInput
+              name="phoneNumber"
+              label="Phone number"
+              placeholder="Enter your details"
+              value={value}
+              keyboardType="phone-pad"
+              validation={errors.phoneNumber}
+              onChangeText={onChange}
+            />
+          )}
+          name="phoneNumber"
+        />
+        {errors.phoneNumber && (
+          <Text style={styles.errorText}>{errors.phoneNumber.message}</Text>
         )}
-        name="phoneNumber"
-      />
-      {errors.phoneNumber && <Text style={styles.errorText}>{errors.phoneNumber.message}</Text>}
 
         {/* <AppInput name="phoneNumber" label="Phone number" placeholder="Enter your details" value={phoneNumber} keyboardType="phone-pad" onChangeText={(value) => setPhoneNumber(value)} /> */}
-        <View style={{gap: 10}}>
-           <Button title="Get started"  onPress={handleSubmit(onSubmit)} buttonType="primary" />
-           <Button title="Continue as guest"  onPress={() => console.log('test')} buttonType="secondary" />
+        <View style={{ gap: 10 }}>
+          <Button
+            title="Get started"
+            onPress={handleSubmit(onSubmit)}
+            buttonType="primary"
+          />
+          <Button
+            title="Continue as guest"
+            onPress={() => console.log('test')}
+            buttonType="secondary"
+          />
         </View>
-      </View>
+      </Animated.View>
     </SafeAreaView>
   )
 }
@@ -58,10 +90,10 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     backgroundColor: COLOR.white,
   },
-  content:{
+  content: {
     alignItems: 'center',
     gap: 10,
-    marginBottom: 40
+    marginBottom: 40,
   },
   innerView: {
     paddingHorizontal: 20,
@@ -82,7 +114,7 @@ const styles = StyleSheet.create({
   errorText: {
     color: COLOR.error,
     marginBottom: 15,
-  }
+  },
 })
 
-export default Login;
+export default Login

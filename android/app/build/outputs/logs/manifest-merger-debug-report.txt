@@ -7,6 +7,7 @@ INJECTED from /Users/sakthivel/Desktop/Project/myapp/android/app/src/debug/Andro
 INJECTED from /Users/sakthivel/Desktop/Project/myapp/android/app/src/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:flipper-integration:0.73.5] /Users/sakthivel/.gradle/caches/transforms-3/49a526363f5122c34ee0da4de241ced3/transformed/jetified-flipper-integration-0.73.5-debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-vector-icons] /Users/sakthivel/Desktop/Project/myapp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-community_netinfo] /Users/sakthivel/Desktop/Project/myapp/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-10:12
 MERGED from [:react-native-gesture-handler] /Users/sakthivel/Desktop/Project/myapp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-reanimated] /Users/sakthivel/Desktop/Project/myapp/node_modules/react-native-reanimated/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-safe-area-context] /Users/sakthivel/Desktop/Project/myapp/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
@@ -182,6 +183,8 @@ MERGED from [com.facebook.react:flipper-integration:0.73.5] /Users/sakthivel/.gr
 MERGED from [com.facebook.react:flipper-integration:0.73.5] /Users/sakthivel/.gradle/caches/transforms-3/49a526363f5122c34ee0da4de241ced3/transformed/jetified-flipper-integration-0.73.5-debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-vector-icons] /Users/sakthivel/Desktop/Project/myapp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-vector-icons] /Users/sakthivel/Desktop/Project/myapp/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-community_netinfo] /Users/sakthivel/Desktop/Project/myapp/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-community_netinfo] /Users/sakthivel/Desktop/Project/myapp/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-gesture-handler] /Users/sakthivel/Desktop/Project/myapp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-gesture-handler] /Users/sakthivel/Desktop/Project/myapp/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-reanimated] /Users/sakthivel/Desktop/Project/myapp/node_modules/react-native-reanimated/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
@@ -334,6 +337,16 @@ MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /Users/sakthivel/
 		INJECTED from /Users/sakthivel/Desktop/Project/myapp/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/sakthivel/Desktop/Project/myapp/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:react-native-community_netinfo] /Users/sakthivel/Desktop/Project/myapp/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from [:react-native-community_netinfo] /Users/sakthivel/Desktop/Project/myapp/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [:react-native-community_netinfo] /Users/sakthivel/Desktop/Project/myapp/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-76
+MERGED from [com.facebook.flipper:flipper:0.201.0] /Users/sakthivel/.gradle/caches/transforms-3/9b2c28bd5719adb7e465469e2ca76c12/transformed/jetified-flipper-0.201.0/AndroidManifest.xml:14:5-76
+MERGED from [com.facebook.flipper:flipper:0.201.0] /Users/sakthivel/.gradle/caches/transforms-3/9b2c28bd5719adb7e465469e2ca76c12/transformed/jetified-flipper-0.201.0/AndroidManifest.xml:14:5-76
+	android:name
+		ADDED from [:react-native-community_netinfo] /Users/sakthivel/Desktop/Project/myapp/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:22-73
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from [com.facebook.react:react-android:0.73.5] /Users/sakthivel/.gradle/caches/transforms-3/3ce902105a4ff251177e5b9f5c724b87/transformed/jetified-react-android-0.73.5-debug/AndroidManifest.xml:16:5-78
 	android:name
@@ -344,10 +357,6 @@ ADDED from [com.facebook.react:react-android:0.73.5] /Users/sakthivel/.gradle/ca
 		ADDED from [com.facebook.react:react-android:0.73.5] /Users/sakthivel/.gradle/caches/transforms-3/3ce902105a4ff251177e5b9f5c724b87/transformed/jetified-react-android-0.73.5-debug/AndroidManifest.xml:21:13-37
 	android:name
 		ADDED from [com.facebook.react:react-android:0.73.5] /Users/sakthivel/.gradle/caches/transforms-3/3ce902105a4ff251177e5b9f5c724b87/transformed/jetified-react-android-0.73.5-debug/AndroidManifest.xml:20:13-77
-uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from [com.facebook.flipper:flipper:0.201.0] /Users/sakthivel/.gradle/caches/transforms-3/9b2c28bd5719adb7e465469e2ca76c12/transformed/jetified-flipper-0.201.0/AndroidManifest.xml:14:5-76
-	android:name
-		ADDED from [com.facebook.flipper:flipper:0.201.0] /Users/sakthivel/.gradle/caches/transforms-3/9b2c28bd5719adb7e465469e2ca76c12/transformed/jetified-flipper-0.201.0/AndroidManifest.xml:14:22-73
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/sakthivel/.gradle/caches/transforms-3/faa3592d2fc203d6c74b9a5f601058a1/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/sakthivel/.gradle/caches/transforms-3/71b91ea8216105cda74b0317da307340/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20

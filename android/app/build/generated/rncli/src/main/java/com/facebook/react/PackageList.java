@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
+// @react-native-community/netinfo
+import com.reactnativecommunity.netinfo.NetInfoPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 // react-native-reanimated
@@ -69,6 +71,7 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new VectorIconsPackage(),
+      new NetInfoPackage(),
       new RNGestureHandlerPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),

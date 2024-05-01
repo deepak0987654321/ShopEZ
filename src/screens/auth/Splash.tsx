@@ -1,38 +1,42 @@
-import React, { useEffect, useState } from 'react';
-import { View, StatusBar, SafeAreaView, StyleSheet, Image, ActivityIndicator } from 'react-native';
-import { COLOR } from '../../theme/theme';
-import { Images, routes } from '../../constants';
-import Logo from '../../assets/images/shop_ez.svg';
+import React, { useEffect, useState } from 'react'
+import {
+  View,
+  StatusBar,
+  SafeAreaView,
+  StyleSheet,
+  Image,
+  ActivityIndicator,
+} from 'react-native'
+import { COLOR } from '../../theme/theme'
+import { Images, routes } from '../../constants'
+import Logo from '../../assets/images/shop_ez.svg'
 
-const Splash = ({navigation}:any) => {
-  const [animating, setAnimating] = useState<boolean>(true);
+const Splash = ({ navigation }: any) => {
+  const [animating, setAnimating] = useState<boolean>(true)
   useEffect(() => {
     setTimeout(() => {
-      setAnimating(false);
-      navigation.replace(routes.ONBOARD);
-    }, 2000);
-  }, [navigation]);
+      setAnimating(false)
+      navigation.replace(routes.ONBOARD)
+    }, 2000)
+  }, [navigation])
   return (
     <SafeAreaView style={styles.main}>
       <StatusBar hidden />
       <View>
-        <Logo/>
+        <Logo />
         <ActivityIndicator
-        animating={animating}
-        color="#FFFFFF"
-        size="large"
-        style={styles.activityIndicator}
-      />
-      </View>
-      <View style={styles.splashBg}>
-        <Image
-          style={styles.bottomImage}
-          source={Images.splash_bg}
+          animating={animating}
+          color="#FFFFFF"
+          size="large"
+          style={styles.activityIndicator}
         />
       </View>
+      <View style={styles.splashBg}>
+        <Image style={styles.bottomImage} source={Images.splash_bg} />
+      </View>
     </SafeAreaView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   main: {
@@ -55,6 +59,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 50,
   },
-});
+})
 
-export default Splash;
+export default Splash
