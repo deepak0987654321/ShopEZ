@@ -16,7 +16,7 @@ navTheme.colors.background = '#FFFFFF'
 const NavContainer = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={routes.HOME}>
+      <Stack.Navigator initialRouteName={routes.SPLASH}>
         <Stack.Screen
           options={{ headerShown: false }}
           name={routes.SPLASH}
